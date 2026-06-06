@@ -1,0 +1,19 @@
+{
+  "name": "node-mcp-dev-1",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "pnpm -w -r run build && node packages/client/dist/example-client.js",
+    "clean": "pnpm -w -r run clean",
+    "start:server-http": "node packages/server/dist/example-server-http.js",
+    "start:client-http": "node packages/client/dist/example-client-http.js",
+    "start:client-ws": "node packages/client/dist/example-client-ws.js"
+  },
+  "devDependencies": {
+    "typescript": "5.3.2",
+    "@types/node": "20.5.1"
+  }
+}
