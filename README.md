@@ -11,6 +11,14 @@ pnpm install
 pnpm build
 ```
 
+If the automated build fails, manually build each package:
+
+```bash
+npx tsc -p packages/common/tsconfig.json
+npx tsc -p packages/server/tsconfig.json
+npx tsc -p packages/client/tsconfig.json
+```
+
 2. Run the HTTP server example (in one terminal):
 
 ```bash
